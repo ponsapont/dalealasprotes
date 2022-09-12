@@ -1,0 +1,15 @@
+{
+    "home": "Home",
+    "start-workout" : "Start Workout",
+    "create-routine" : "Create Routine",
+    "add-exercise" : "Add Exercise",
+    "list-workouts" : "List Workouts",
+    "history" : "History",
+    "charts" : "Charts",
+    "save": "Save",
+    "routine-name": "Routine Name",
+    "exercises": "Exercises",
+    "no-exercises": "There are yet no exercises",
+    "invalid": "Invalid data",
+    "invalid-text": "There is invalid data in the form"
+}
