@@ -10,6 +10,19 @@
     "routine-name": "Routine Name",
     "exercises": "Exercises",
     "no-exercises": "There are yet no exercises",
+    "create-exercise" : "Create Exercise",
+    "muscle-groups" : "Muscle Groups",
+    "exercise-name" : "Exercise Name",
     "invalid": "Invalid data",
-    "invalid-text": "There is invalid data in the form"
+    "invalid-text": "There is invalid data in the form",
+    "chest": "Chest",
+    "shoulder": "Shoulder",
+    "forearm": "Forearm",
+    "biceps": "Biceps",
+    "triceps": "Triceps",
+    "lads": "Lads",
+    "lower-back": "Lower Back",
+    "quadriceps": "Quadriceps",
+    "hamstrings": "Hamstrings",
+    "calves": "Calves"
 }

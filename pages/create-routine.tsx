@@ -27,7 +27,7 @@ import Link from "next/link";
 import { getExerciseDefs } from "../services/backend";
 import { ExerciseDef } from "../services/models";
 
-const Home: NextPage = () => {
+const CreateRoutine: NextPage = () => {
   const [routineName, setRoutineName] = useState<string>("");
   const [exercises, setExercises] = useState<Array<ExerciseDef>>([]);
   const [valid, setValid] = useState<boolean>(true);
@@ -92,4 +92,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default CreateRoutine;

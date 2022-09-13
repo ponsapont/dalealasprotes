@@ -9,7 +9,8 @@ type ExerciseDef = {
 };
 
 type MuscleGroup = {
-    [key: number]: string
+    id: number,
+    name: string,
 };
 
 type Workout = {

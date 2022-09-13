@@ -2,16 +2,19 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { provider } from "../services/firebaseConfig";
 
-import { getAuth, getRedirectResult, signInWithRedirect } from "firebase/auth";
-import { useEffect, useState } from "react";
-import { Center, ChakraProvider, Container, extendTheme, Flex, Spinner } from "@chakra-ui/react";
+import { getAuth, getRedirectResult, signInWithRedirect, User } from "firebase/auth";
+import React, { useContext, useEffect, useState } from "react";
+import { Center, ChakraProvider, Flex, Spinner } from "@chakra-ui/react";
 import { IntlProvider } from "react-intl";
 import SideNav from "../components/SideNav";
+import UserContext from "../components/UserContext";
 
 let messagesEn = require("../i18n/messages-en.json");
 
 function MyApp({ Component, pageProps }: AppProps) {
-  let [initialised, setInitialised] = useState(false);
+  const [initialised, setInitialised] = useState(false);
+  const [user, setUser] = useState<any>({});
+
 
   useEffect(() => {
     const init = async () => {
@@ -19,6 +22,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       const result = await getRedirectResult(auth);
       if (!auth.currentUser) {
         await signInWithRedirect(auth, provider);
+      } else {
+        setUser(auth.currentUser);
       }
       setInitialised(true);
     };
@@ -28,6 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider>
       <IntlProvider messages={messagesEn} locale="en" defaultLocale="en">
+        <UserContext.Provider value={user}>
         <SideNav />
         <Center paddingTop={"16px"} backgroundColor="blackAlpha.900">
           {initialised ? (
@@ -44,6 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </Flex>
           )}
         </Center>
+        </UserContext.Provider>
       </IntlProvider>
     </ChakraProvider>
   );

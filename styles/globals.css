@@ -1,6 +1,7 @@
-html {
+html, select.css-1hokd9z > option {
   background-color: var(--chakra-colors-blackAlpha-900);
 }
+
 html label, .css-1dsvy77, .css-1ohbhgu, .chakra-form-control  {
   color: var(--chakra-colors-whiteAlpha-700)
 }
