@@ -11,12 +11,12 @@ import AddCardIcon from "@mui/icons-material/AddCard";
 import Link from "next/link";
 
 const navItems = [
-  { slug: "start-workout", icon: <FitnessCenterIcon /> },
-  { slug: "create-routine", icon: <PlaylistAddIcon /> },
-  { slug: "add-exercise", icon: <BoltIcon /> },
-  { slug: "list-workouts", icon: <AddCardIcon /> },
-  { slug: "history", icon: <HistoryIcon /> },
-  { slug: "charts", icon: <BarChartIcon /> },
+  { name: "start-workout", slug: "start-workout", icon: <FitnessCenterIcon/> },
+  { name: "create-routine", slug: "create-routine", icon: <PlaylistAddIcon/> },
+  { name: "add-exercise", slug: "edit-exercise", icon: <BoltIcon/> },
+  { name: "list-workouts", slug: "list-workouts", icon: <AddCardIcon/> },
+  { name: "history", slug: "history", icon: <HistoryIcon/> },
+  { name: "charts", slug: "charts", icon: <BarChartIcon/> },
 ];
 
 const Home: NextPage = () => {
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         {navItems.map((item, idx) => (
           <Link key={idx} href={item.slug}>
             <Button color={"whiteAlpha.900"} backgroundColor={"blue.700"}size={"lg"} >
-              <FormattedMessage id={item.slug} />
+              <FormattedMessage id={item.name} />
             </Button>
           </Link>
         ))}

@@ -27,12 +27,12 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import AddCardIcon from '@mui/icons-material/AddCard';
 
 const navItems = [
-  { slug: "start-workout", icon: <FitnessCenterIcon/> },
-  { slug: "create-routine", icon: <PlaylistAddIcon/> },
-  { slug: "add-exercise", icon: <BoltIcon/> },
-  { slug: "list-workouts", icon: <AddCardIcon/> },
-  { slug: "history", icon: <HistoryIcon/> },
-  { slug: "charts", icon: <BarChartIcon/> },
+  { name: "start-workout", slug: "start-workout", icon: <FitnessCenterIcon/> },
+  { name: "create-routine", slug: "create-routine", icon: <PlaylistAddIcon/> },
+  { name: "add-exercise", slug: "edit-exercise", icon: <BoltIcon/> },
+  { name: "list-workouts", slug: "list-workouts", icon: <AddCardIcon/> },
+  { name: "history", slug: "history", icon: <HistoryIcon/> },
+  { name: "charts", slug: "charts", icon: <BarChartIcon/> },
 ];
 
 export default function SideNav() {
@@ -76,7 +76,7 @@ export default function SideNav() {
                       <Flex fontSize={"xl"} color={"whiteAlpha.800"} display="flex" alignItems={"center"}>
                         {item.icon}
                         <div style={{"marginLeft": "16px"}}>
-                          <FormattedMessage id={item.slug} />
+                          <FormattedMessage id={item.name} />
                         </div>
                       </Flex>
                     </a>
