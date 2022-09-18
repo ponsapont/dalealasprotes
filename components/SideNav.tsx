@@ -24,13 +24,14 @@ import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import BoltIcon from '@mui/icons-material/Bolt';
 import HistoryIcon from '@mui/icons-material/History';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import AddCardIcon from '@mui/icons-material/AddCard';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 
 const navItems = [
   { name: "start-workout", slug: "start-workout", icon: <FitnessCenterIcon/> },
   { name: "create-routine", slug: "create-routine", icon: <PlaylistAddIcon/> },
   { name: "add-exercise", slug: "edit-exercise", icon: <BoltIcon/> },
-  { name: "list-workouts", slug: "list-workouts", icon: <AddCardIcon/> },
+  { name: "list-exercises", slug: "list-exercises", icon: <FormatListBulletedIcon/> },
+  { name: "list-workouts", slug: "list-workouts", icon: <FormatListBulletedIcon/> },
   { name: "history", slug: "history", icon: <HistoryIcon/> },
   { name: "charts", slug: "charts", icon: <BarChartIcon/> },
 ];
