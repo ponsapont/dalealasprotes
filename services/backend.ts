@@ -38,6 +38,10 @@ export const getRoutines = async (): Promise<Array<Routine>> => {
   })) as Array<Routine>;
 };
 
+export const getRoutine = async (id: string): Promise<Routine> => {
+  return (await getDoc(doc(db, "routines", id))).data() as Routine;
+};
+
 export const getWorkouts = async (): Promise<Array<Workout>> => {
   return (await getDocs(collection(db, "workouts"))).docs.map((doc) => ({
     ...doc.data(),
@@ -49,6 +53,14 @@ export const addExerciseDef = async (exercise: ExerciseDef) => {
   addDoc(collection(db, "exercises"), exercise);
 };
 
+export const addRoutine = async (routine: Routine) => {
+  addDoc(collection(db, "routines"), routine);
+};
+
 export const updateExerciseDef = async (id: string, exercise: ExerciseDef) => {
   setDoc(doc(db, "exercises", id), exercise);
+};
+
+export const updateRoutine = async (id: string, routine: Routine) => {
+  setDoc(doc(db, "routines", id), routine);
 };

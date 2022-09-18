@@ -14,8 +14,10 @@ import Link from "next/link";
 const navItems = [
   { name: "start-workout", slug: "start-workout", icon: <FitnessCenterIcon/> },
   { name: "create-routine", slug: "create-routine", icon: <PlaylistAddIcon/> },
+  { name: "add-routine", slug: "edit-routine", icon: <PlaylistAddIcon/> },
   { name: "add-exercise", slug: "edit-exercise", icon: <BoltIcon/> },
   { name: "list-exercises", slug: "list-exercises", icon: <FormatListBulletedIcon/> },
+  { name: "list-routines", slug: "list-routines", icon: <FormatListBulletedIcon/> },
   { name: "list-workouts", slug: "list-workouts", icon: <FormatListBulletedIcon/> },
   { name: "history", slug: "history", icon: <HistoryIcon/> },
   { name: "charts", slug: "charts", icon: <BarChartIcon/> },
